@@ -1,0 +1,39 @@
+<div class="webclap">
+    <form id="webclap{{ postid }}" name="webclap{{ postid }}" action="{{ clapurl }}" method="post"{% if(isOtherWindow) %} target="webclap"{% end %}>
+        <input type="hidden" name="page" value="{{ postid }}" />
+        <a id="clapbutton{{ postid }}" class="clapbutton" href="{{ clapurl }}"{% if(isOtherWindow) %} target="webclap"{% end %}>
+            <img id="clapimg{{ postid }}" class="clapimg" src="{{ image_link }}" />
+        </a>
+    </form>
+    <script type="text/javascript">
+        (function($) {
+            var fid = '#webclap{{ postid }}';
+            var bid = '#clapbutton{{ postid }}';
+            var img = '#clapimg{{ postid }}';
+            {% if(isOtherWindow) %}
+            $(bid).click(function(e) {
+                window.open(
+                    '',
+                    'webclap',
+                    'toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes'
+                );
+                $(fid).submit();
+                e.preventDefault();
+                return false;
+            });
+            {% else %}
+            $(bid).click(function(e) {
+                $(fid).submit();
+                e.preventDefault();
+                return false;
+            });
+            {% end %}
+            $(img).mouseover(function() {
+                this.src='{{ image_hover }}';
+            });
+            $(img).mouseout(function() {
+                this.src='{{ image_link }}';
+            });
+        })(jQuery);
+    </script>
+</div>

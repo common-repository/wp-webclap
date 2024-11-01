@@ -1,0 +1,408 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-webclap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-05 11:20+0900\n"
+"PO-Revision-Date: 2014-09-05 11:21+0900\n"
+"Last-Translator: Yuki Kisaragi <yuki@transrain.net>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;Description:;_e;e;r\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../Wp/WebClap/Administration.php:33 ../Wp/WebClap/Administration.php:34
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:14
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:44
+msgid "Analysis for Webclap"
+msgstr "web拍手解析"
+
+#: ../Wp/WebClap/Administration.php:44 ../Wp/WebClap/Administration.php:45
+msgid "configuration for web clap"
+msgstr "web拍手プラグイン設定"
+
+#: ../Wp/WebClap/Administration.php:158
+msgid "cleared webclap count."
+msgstr "Web拍手データが削除されました。"
+
+#: ../Wp/WebClap/Administration.php:169 ../Wp/WebClap/Data.php:199
+#: ../Wp/WebClap/Data.php:396
+msgid "web clap button"
+msgstr "web拍手ボタン"
+
+#: ../Wp/WebClap/Administration.php:237
+msgid "updated webclap information."
+msgstr "Web拍手情報が更新されました。"
+
+#: ../Wp/WebClap/Dashboard.php:39
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:4
+msgid "Web Clap"
+msgstr "web拍手"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:9
+msgid "Configuration for wp-webclap"
+msgstr "web拍手プラグイン設定"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:11
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:103
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:162
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:172
+msgid "update"
+msgstr "変更を保存"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:13
+msgid "Configration Web Clap"
+msgstr "web拍手の設定"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:16
+msgid "clap type"
+msgstr "Web拍手種類"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:20
+msgid "build in"
+msgstr "内蔵"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:21
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:168
+msgid "webclap.com"
+msgstr "web拍手プラス"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:28
+msgid "button display type"
+msgstr "ボタン挿入方法"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:32
+msgid "manually"
+msgstr "手動"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:33
+msgid "automatic"
+msgstr "自動"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:40
+msgid "Process page"
+msgstr "処理ページ"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:40
+msgid "Single page's url"
+msgstr "固定ページURL"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:48
+msgid "display method"
+msgstr "表示方法"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:52
+msgid "button"
+msgstr "ボタン"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:53
+msgid "text"
+msgstr "テキスト"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:54
+msgid "image"
+msgstr "画像"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:55
+msgid "customize"
+msgstr "カスタマイズ"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:60
+msgid "other window"
+msgstr "新しいウィンドウで開く"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:61
+msgid "self window"
+msgstr "同じウィンドウで開く"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:64
+msgid "ex."
+msgstr "設定例"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:65
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:167
+msgid "account name"
+msgstr "アカウント名"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:66
+msgid "button text"
+msgstr "ボタンテキスト"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:67
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:11
+msgid "page id"
+msgstr "ページID"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:74
+msgid "auto button enable"
+msgstr "デフォルトでボタンを有効にする"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:79
+msgid "default button text"
+msgstr "標準のボタンテキスト"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:84
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:87
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:93
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:96
+msgid "button image"
+msgstr "ボタン画像"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:84
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:87
+msgid "normal"
+msgstr "通常時"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:93
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:96
+msgid "mouse overed"
+msgstr "ホバー時"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:106
+msgid "Configuration for using built-in engine"
+msgstr "内蔵web拍手使用時の設定"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:109
+msgid "Name input setting"
+msgstr "名前入力設定"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:113
+msgid "required"
+msgstr "必須"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:114
+msgid "possible"
+msgstr "可能"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:115
+msgid "impossible"
+msgstr "不可"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:122
+msgid "Button indicative position"
+msgstr "ボタン表示位置"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:126
+msgid "both"
+msgstr "両方"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:127
+msgid "upper part"
+msgstr "上部"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:128
+msgid "lower part"
+msgstr "下部"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:135
+msgid "Available role of the analysis page"
+msgstr "解析ページの必要権限"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:139
+msgid "Administrator"
+msgstr "管理者"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:140
+msgid "Editor"
+msgstr "編集者"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:141
+msgid "Author"
+msgstr "投稿者"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:142
+msgid "Contributor"
+msgstr "寄稿者"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:143
+msgid "Subscriber"
+msgstr "購読者"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:150
+msgid "Append clap count to clap button"
+msgstr "拍手ボタンに拍手数を追加する"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:154
+msgid "enable"
+msgstr "有効"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:155
+msgid "disable"
+msgstr "無効"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:164
+msgid "Configuration for using webclap.com"
+msgstr "web拍手プラス使用時の設定"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:176
+msgid "data cleaning"
+msgstr "データ削除"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:179
+msgid "Caution!"
+msgstr "警告!"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:180
+msgid "this button clicked, clear all clap datas."
+msgstr "このボタンをクリックすると、全ての拍手データがクリアされます。"
+
+#: ../caches/01/5e/079b18ab11b263f98c27072bf2f2fa71f21a.php:182
+msgid "clear all clap data"
+msgstr "全ての拍手データを削除"
+
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:7
+msgid "attache web clap button"
+msgstr "web拍手ボタンを設置する"
+
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:9
+msgid "web clap button text"
+msgstr "web拍手ボタンテキスト"
+
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:11
+msgid "optional"
+msgstr "任意"
+
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:11
+msgid "usable characters"
+msgstr "使用可能文字"
+
+#: ../caches/42/1d/bf40569059e5428b7f7e221a59c443a8fa31.php:11
+msgid "~"
+msgstr "～"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:14
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:20
+#: ../caches/f9/04/53ec712ce4505cc425e7e881e1d58ea274c3.php:58
+msgid "popular entry"
+msgstr "人気記事"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:23
+msgid "rank"
+msgstr "ランク"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:24
+msgid "entries"
+msgstr "エントリー"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:25
+msgid "head-count"
+msgstr "人数"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:26
+msgid "clap-count"
+msgstr "拍手数"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:27
+msgid "comment-count"
+msgstr "コメント数"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:51
+msgid "to 14 days"
+msgstr "から14日"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:57
+msgid "near 14 days"
+msgstr "直近の14日"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:58
+msgid "next 14 days"
+msgstr "次の14日"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:60
+msgid "previous 14 days"
+msgstr "前の14日"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:90
+msgid "analysis"
+msgstr "解析"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:93
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:98
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:134
+msgid "hour"
+msgstr "時間"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:94
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:99
+msgid "head count"
+msgstr "人数"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:95
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:100
+msgid "clap count"
+msgstr "拍手"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:96
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:101
+msgid "comment count"
+msgstr "コメ"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:97
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:102
+msgid "graph"
+msgstr "グラフ"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:131
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:136
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:23
+msgid "comment"
+msgstr "コメント"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:135
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:9
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:18
+msgid "name"
+msgstr "名前"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:137
+msgid "ip address"
+msgstr "IPアドレス"
+
+#: ../caches/93/26/022b0f19d6a03363f80a9fd8992566eeca4e.php:138
+msgid "target entry"
+msgstr "対象の記事"
+
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:2
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:35
+msgid "webclap comment form"
+msgstr "web拍手 コメントフォーム"
+
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:5
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:28
+msgid "send more"
+msgstr "さらに拍手を送る"
+
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:12
+msgid "name is required"
+msgstr "名前は必須入力です。"
+
+#: ../caches/d6/72/4495c5caed63106b7229ad51ce6166be6607.php:14
+msgid "if inputed comment, input required name."
+msgstr "コメントが入力されている場合は必須入力です。"
+
+#~ msgid "Thank you for your claps!"
+#~ msgstr "拍手をしてくれてありがとうございます！"
+
+#, fuzzy
+#~ msgid "Web Clap plus"
+#~ msgstr "web拍手ボタン"
+
+#~ msgid "default"
+#~ msgstr "標準"
+
+#~ msgid "JavaScript"
+#~ msgstr "JavaScript"
+
+#~ msgid "Switch by click"
+#~ msgstr "クリックで切り替え"
+
+#~ msgid "this plugin can \"web clap\" button setup in blog."
+#~ msgstr "Web拍手ボタンをブログに設置する事が出来るプラグインです。"
+
+#, fuzzy
+#~ msgid "Web Clap buttons"
+#~ msgstr "Web拍手"

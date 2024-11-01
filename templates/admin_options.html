@@ -1,0 +1,185 @@
+{% if(updatemessage) %}
+<div id="message" class="updated fade"><p><strong>{{ updatemessage }}</strong></p></div>
+{% end %}
+
+<div class="wrap">
+
+    <div id="icon-options-general" class="icon32"><br></div>
+
+    <h2>{% __("Configuration for wp-webclap") %}</h2>
+    <form method="post" enctype="multipart/form-data">
+        <p class="submit"><input class="button button-primary" type="submit" name="submit" value="{% __("update") %}" /></p>
+
+        <h3 class="title">{% __("Configration Web Clap") %}</h3>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row"><label for="claptype">{% __("clap type") %}</label></th>
+                <td>
+                    <p>
+                        <select id="claptype" name="claptype">
+                            <option value="0"{{ claptype_builtin }}>{% __("build in") %}</option>
+                            <option value="1"{{ claptype_external }}>{% __("webclap.com") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="disptype">{% __("button display type") %}</label></th>
+                <td>
+                    <p>
+                        <select id="disptype" name="disptype">
+                            <option value="0"{{ disptype_manually }}>{% __("manually") %}</option>
+                            <option value="1"{{ disptype_automatic }}>{% __("automatic") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="processpage">{% __("Process page") %}({% __("Single page's url") %})</label></th>
+                <td>
+                    <p>
+                        <input type="text" id="processpage" name="processpage" value="{{ processpage }}" />
+                    </p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><label for="viewtype">{% __("display method") %}</label></th>
+                <td>
+                    <p>
+                        <select id="viewtype" name="viewtype">
+                            <option value="0"{{ viewtype_button }}>{% __("button") %}</option>
+                            <option value="1"{{ viewtype_link }}>{% __("text") %}</option>
+                            <option value="2"{{ viewtype_image }}>{% __("image") %}</option>
+                            <option value="9"{{ viewtype_custom }}>{% __("customize") %}</option>
+                        </select>
+                    </p>
+                    <p>
+                        <select id="opentype" name="opentype">
+                            <option value="0"{{ opentype_other }}>{% __("other window") %}</option>
+                            <option value="1"{{ opentype_self }}>{% __("self window") %}</option>
+                        </select>
+                    </p>
+                    <p id="for-customize">{% __("ex.") %}<br />
+                        [account] {% __("account name") %}<br />
+                        [value] {% __("button text") %}<br />
+                        [page] {% __("page id") %}<br />
+                        <textarea id="viewformat" name="viewformat" rows="5" cols="60" >{{ viewformat }}</textarea>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="enabled">{% __("auto button enable") %}</label></th>
+                <td><input id="enabled" name="enabled" type="checkbox" value="1"{{ enabled }} /></td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="default">{% __("default button text") %}</label></th>
+                <td><input id="default" name="default" type="text" value="{{ default }}" size="40" /></td>
+            </tr>
+
+            <tr id="for-images1" valign="top">
+                <th scope="row"><label for="imageslink">{% __("button image") %} {% __("normal") %}</label></th>
+                <td>
+                    {% if(imglink) %}
+                    <img src="{{ imglink }}" alt="{% __("button image") %} {% __("normal") %}" />
+                    {% end %}
+                    <input id="imageslink" name="imageslink" type="file" size="40" /><br />
+                </td>
+            </tr>
+            <tr id="for-images2" valign="top">
+                <th scope="row"><label for="imageshover">{% __("button image") %} {% __("mouse overed") %}</label></th>
+                <td>
+                    {% if(imghover) %}
+                    <img src="{{ imghover }}" alt="{% __("button image") %} {% __("mouse overed") %}" />
+                    {% end %}
+                    <input id="imageshover" name="imageshover" type="file" size="40" />
+                </td>
+            </tr>
+
+        </table>
+        <p class="submit"><input class="button button-primary" type="submit" name="submit" value="{% __("update") %}" /></p>
+
+
+        <h3 class="title">{% __("Configuration for using built-in engine") %}</h3>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row"><label for="enableName">{% __("Name input setting") %}</label></th>
+                <td>
+                    <p>
+                        <select id="enableName" name="enableName">
+                            <option value="2"{{ enablename_require }}>{% __("required") %}</option>
+                            <option value="1"{{ enablename_possible }}>{% __("possible") %}</option>
+                            <option value="0"{{ enablename_impossible }}>{% __("impossible") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="buttonPlace">{% __("Button indicative position") %}</label></th>
+                <td>
+                    <p>
+                        <select id="buttonPlace" name="buttonPlace">
+                            <option value="0"{{ buttonplace_both }}>{% __("both") %}</option>
+                            <option value="1"{{ buttonplace_upper }}>{% __("upper part") %}</option>
+                            <option value="2"{{ buttonplace_lower }}>{% __("lower part") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="analysisrole">{% __("Available role of the analysis page") %}</label></th>
+                <td>
+                    <p>
+                        <select id="analysisrole" name="analysisrole">
+                            <option value="manage_options"{{ analysis_administrator }}>{% __("Administrator") %}</option>
+                            <option value="publish_pages"{{ analysis_editor }}>{% __("Editor") %}</option>
+                            <option value="publish_posts"{{ analysis_author }}>{% __("Author") %}</option>
+                            <option value="edit_posts"{{ analysis_contributor }}>{% __("Contributor") %}</option>
+                            <option value="read"{{ analysis_subscriber }}>{% __("Subscriber") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="appendclapcount">{% __("Append clap count to clap button") %}</label></th>
+                <td>
+                    <p>
+                        <select id="appendclapcount" name="appendclapcount">
+                            <option value="1"{{ clapcount_enable }}>{% __("enable") %}</option>
+                            <option value="0"{{ clapcount_disable }}>{% __("disable") %}</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+
+        </table>
+        <p class="submit"><input class="button button-primary" type="submit" name="submit" value="{% __("update") %}" /></p>
+
+        <h3 class="title">{% __("Configuration for using webclap.com") %}</h3>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row"><label for="account">{% __("account name") %}
+                        (<a href="http://www.webclap.com/" target="_blank" rel="nofollow">{% __("webclap.com") %}</a>)</label></th>
+                <td><input id="account" name="account" type="text" value="{{ account }}" size="20" /></td>
+            </tr>
+        </table>
+        <p class="submit"><input class="button button-primary" type="submit" name="submit" value="{% __("update") %}" /></p>
+
+    </form>
+
+    <h2>{% __("data cleaning") %}</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="wp-ui-notification" style="display:block;padding: 1px 10px;">
+            <p><strong>{% __("Caution!") %}</strong></h3>
+            <p>{% __("this button clicked, clear all clap datas.") %}</p>
+        </div>
+        <p class="submit"><input class="button button-secondary" type="submit" name="clear" value="{% __("clear all clap data") %}" /></p>
+    </form>
+
+</div>

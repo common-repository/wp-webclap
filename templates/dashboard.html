@@ -1,0 +1,73 @@
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+jQuery(window).bind("resize", drawChart);
+function drawChart() {
+    jQuery('#wpwc-stats-chart').empty();
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', '日付');
+    data.addColumn('number', '人数');
+    data.addColumn('number', '拍手');
+    data.addColumn('number', 'コメント');
+    data.addRows({{ graph|raw }});
+
+    var options = {
+        legend: { position: 'none' },
+        width: jQuery('#wpwc-stats-chart').innerWidth(),
+        height: 175,
+        backgroundColor: { fill: '#f7f7f7' },
+        chartArea: { top: 8, left: 40, width: 370, height: 152 }
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('wpwc-stats-chart'));
+    chart.draw(data, options);
+}
+</script>
+<style type="text/css">
+#wpwc-stats-upper {zoom:1;}#wpwc-stats-upper:after {content: ""; display: block; clear: both;}
+#wpwc-stats-upper a.button { float: right }
+#wpwc-stats-bottom {
+    background-color: #fcfcfc;
+    margin: 10px -10px -10px -10px;
+    border-top: 1px solid #dfdfdf;
+    padding: 10px;
+}
+
+#wpwc-stats-bottom {zoom:1;}#wpwc-stats-bottom:after {content: ""; display: block; clear: both;}
+#wpwc-stats-top      {float:left;width:50%;}
+#wpwc-ststs-comments {float:left;width:50%;}
+
+#wpwc-stats-bottom p {
+color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#wpwc-stats-bottom p a {
+display: block;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+</style>
+<div id="wpwc-stats-upper">
+    <div id="wpwc-stats-chart"></div>
+    <a class="button" href="index.php?page=webclap-analysis">すべて表示</a>
+</div>
+
+<div id="wpwc-stats-bottom">
+    <div id="wpwc-stats-top">
+        <h4 class="heading">{% __("popular entry") %}</h4>
+        {% each(rank as row) %}
+        <p><a href="{{ row['url'] }}" target="_blank">{{ row['title'] }}</a>{{ row['human'] }}人 / {{ row['count'] }}拍手 / {{ row['comment'] }}コメント</p>
+        {% end %}
+    </div>
+
+    <div id="wpwc-ststs-comments">
+        <h4 class="heading">コメント</h4>
+        {% each(comment as row) %}
+        <p>{{ row['comment'] }}</p>
+        {% end %}
+    </div>
+</div>
+
+
+

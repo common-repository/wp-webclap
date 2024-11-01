@@ -1,0 +1,35 @@
+
+        <!-- START {% __("webclap comment form") %} -->
+        <form id="webclap{{ page_id }}" method="post"{% if(isOtherWindow) %} target="webclap"{% end %}><table>
+            {% if(isButtonUpper) %}
+            <tr><td colspan="2"><input type="submit" id="webclap-submit-before" value="{% __("send more") %}" /></td></tr>
+            {% end %}
+            
+            {% if(enableNameRequired) %}
+            <tr><th><label for="name"><span style="color:red">*</span> {% __("name") %}</label></th>
+            <td><input type="text" id="webclap-name" name="wcname" value="{{ name }}" />
+            {% if(isErrorName) %}
+            <span style="color:red">{% __("name is required") %}</span>
+            {% end %}
+            <br /><span style="font-size:small;color:red">* {% __("if inputed comment, input required name.") %}</span>
+            </td>
+            </tr>
+            {% elseif(enableName) %}
+            <tr><th><label for="name">{% __("name") %}</label></th>
+            <td><input type="text" id="webclap-name" name="wcname" value="{{ name }}" /></td>
+            </tr>
+            {% end %}
+
+            <tr><th><label for="name">{% __("comment") %}</label></th>
+            <td><textarea id="webclap-comment" name="comment" rows="4" cols="50"></textarea></td>
+            </tr>
+            
+            {% if(isButtonLower) %}
+            <tr><td colspan="2"><input type="submit" id="webclap-submit-after" value="{% __("send more") %}" /></td></tr>
+            {% end %}
+            </table>
+            
+            <input type="hidden" name="page" value="{{ page_id }}" />
+            <input type="hidden" name="count" value="{{ count }}" />
+        </form>
+        <!-- E N D {% __("webclap comment form") %} -->

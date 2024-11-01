@@ -1,0 +1,155 @@
+<style type="text/css">
+
+    #wpwc-analysis table { margin: 1em 0; width: 100%; border-collapse: collapse; border: 1px solid #DDDDDD; }
+    #wpwc-analysis table thead th { background-color: #DDDDDD; }
+     #wpwc-analysis table tbody td { text-align: center; border: 1px solid #DDDDDD; }
+     #wpwc-analysis table tbody td.cellleft { text-align: left; }
+</style>
+<div id="wpwc-analysis" class="wrap">
+
+    <div id="icon-users" class="icon32"><br></div>
+
+
+    {% if(is_ranking) %}
+        <h2>{% __("Analysis for Webclap") %} / {% __("popular entry") %}</h2>
+        <p><a href="index.php?page=webclap-analysis">解析結果はこちら</a></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">{% __("popular entry") %}</th>
+                </tr>
+                <tr>
+                    <th>{% __("rank") %}</th>
+                    <th>{% __("entries") %}</th>
+                    <th>{% __("head-count") %}</th>
+                    <th>{% __("clap-count") %}</th>
+                    <th>{% __("comment-count") %}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% each(rank as row) %}
+            <tr>
+                <td>{{ row['rank'] }}</td>
+                <td><a href="{{ row['url'] }}" target="_blank">{{ row['title'] }}</a></td>
+                <td>{{ row['human'] }}</td>
+                <td>{{ row['count'] }}</td>
+                <td>{{ row['comment'] }}</td>
+            </tr>
+            {% end %}
+            </tbody>
+        </table>
+
+    {% else %}
+        <h2>{% __("Analysis for Webclap") %} / {{ date }}</h2>
+        <p><a href="index.php?page=webclap-analysis&ranking=all">人気記事はこちら</a></p>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="{{ week_count }}">
+                        {{ date }} {% __("to 14 days") %}
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="{{ week_count }}">
+                        {% if(pos_next) %}
+                        <a href="index.php?page=webclap-analysis">{% __("near 14 days") %}</a> |
+                        <a href="index.php?page=webclap-analysis&date={{ pos_next }}">{% __("next 14 days") %}</a>
+                        |{% end %}
+                        <a href="index.php?page=webclap-analysis&date={{ pos_prev }}">{% __("previous 14 days") %}</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>{% for ($i=0; $i<$week_count; $i++) { %}
+                    <td><img src="http://chart.apis.google.com/chart?chbh=a,0,0&chs=32x220&cht=bvs&chco=4D89F9,C6D9FD&chds=0,{{ week_max }},0,{{ week_max }}&chd={{ week['graph'][$i] }}" /></td>
+                {% end %}</tr>
+                <tr>{% for ($i=0; $i<$week_count; $i++) { %}
+                    <td>
+                        <img src="{{ icon_clap }}" width="12" height="12" /> {{ week['count'][$i] }}<br />
+                        <img src="{{ icon_human }}" width="12" height="12" /> {{ week['human'][$i] }}<br />
+                        <img src="{{ icon_comment }}" width="12" height="12" /> {{ week['comment'][$i] }}<br />
+                    </td>
+                {% end %}</tr>
+                <tr>{% for ($i=0; $i<$week_count; $i++) { %}
+                    {% if ($rawdate === $week['linkdate'][$i]) { %}
+                    <td>{{ week['date'][$i] }}</td>
+                    {% else %}
+                    <td><a href="index.php?page=webclap-analysis&date={{ week['linkdate'][$i] }}">{{ week['date'][$i] }}</a></td>
+                    {% end %}
+                {% end %}</tr>
+
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="10">{{ date }} {% __("analysis") %}</th>
+                </tr>
+                <tr>
+                    <th>{% __("hour") %}</th>
+                    <th>{% __("head count") %}</th>
+                    <th>{% __("clap count") %}</th>
+                    <th>{% __("comment count") %}</th>
+                    <th>{% __("graph") %}</th>
+                    <th>{% __("hour") %}</th>
+                    <th>{% __("head count") %}</th>
+                    <th>{% __("clap count") %}</th>
+                    <th>{% __("comment count") %}</th>
+                    <th>{% __("graph") %}</th>
+                </tr>
+            </thead>
+            <tbody>
+        {% for ($i=0; $i<12; $i++) { %}
+            {% $left = $day[$i]; $right = $day[$i+12]; %}
+            {% $lh = $left['count'] - $left['human']; $rh = $right['count'] - $right['human']; %}
+                <tr>
+                    <td>{{ i }}</td>
+                    <td>{{ left['human'] }}</td>
+                    <td>{{ left['count'] }}</td>
+                    <td>{{ left['comment'] }}</td>
+                    <td class="cellleft"><img src="http://chart.apis.google.com/chart?chbh=a,0,0&chs=220x16&cht=bhs&chco=4D89F9,C6D9FD&chds=0,{{ max }},0,{{ max }}&chd=t:{{ lh }}|{{ left['human'] }}" /></td>
+
+                    <td>{{ i+12 }}</td>
+                    <td>{{ right['human'] }}</td>
+                    <td>{{ right['count'] }}</td>
+                    <td>{{ right['comment'] }}</td>
+                    <td class="cellleft"><img src="http://chart.apis.google.com/chart?chbh=a,0,0&chs=220x16&cht=bhs&chco=4D89F9,C6D9FD&chds=0,{{ max }},0,{{ max }}&chd=t:{{ rh }}|{{ right['human'] }}" /></td>
+
+                </tr>
+        {% end %}
+            </tbody>
+        </table>
+
+
+        <table>
+            <thead>
+                <tr>
+                    {% if(isCommentName) %}<th colspan="5">{% else %}<th colspan="4">{% end %}{% __("comment") %}</th>
+                </tr>
+                <tr>
+                    <th>{% __("hour") %}</th>
+                    {% if(isCommentName) %}<th>{% __("name") %}</th>{% end %}
+                    <th>{% __("comment") %}</th>
+                    <th>{% __("ip address") %}</th>
+                    <th>{% __("target entry") %}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% each(comments as comment) %}
+            <tr>
+                <td>{{ comment->clap_datetime }}</td>
+                {% if(isCommentName) %}<td>{{ comment->clap_name }}</td>{% end %}
+                <td>{{ comment->clap_comment }}</td>
+                <td>{{ comment->ipaddress }}</td>
+                <td><a href="{{ comment->post_url }}" target="_blank">{{ comment->post_title }}</a></td>
+            </tr>
+            {% end %}
+            </tbody>
+        </table>
+    {% end %}
+
+</div>

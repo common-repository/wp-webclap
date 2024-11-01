@@ -1,0 +1,23 @@
+<div class="webclap">
+    <form id="webclap{{ postid }}" action="{{ clapurl }}" method="post"{% if(isOtherWindow) %} target="webclap"{% end %}>
+        <input type="hidden" name="page" value="{{ postid }}" />
+        <a id="clapbutton{{ postid }}" href="{{ clapurl }}?page={{ postid }}"{% if(isOtherWindow) %} target="webclap"{% end %}>{{ title }}{% if(isButtonCount) %}({{ buttonCount }}){% end %}</a>
+    </form>
+    {% if(isOtherWindow) %}
+    <script type="text/javascript">
+        (function($) {
+            var fid = '#webclap{{ postid }}';
+            var bid = '#clapbutton{{ postid }}';
+            $(bid).click(function() {
+                window.open(
+                    '',
+                    'webclap',
+                    'toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes'
+                );
+                $(fid).submit();
+                return false;
+            });
+        })(jQuery);
+    </script>
+    {% end %}
+</div>
